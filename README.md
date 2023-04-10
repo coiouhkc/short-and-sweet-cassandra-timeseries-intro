@@ -1,42 +1,81 @@
-# Template for short-and-sweet lightning talks
+---
+marp: true
+description: Short and sweet Intro to Cassandra (and Timeseries)
+theme: uncover
+paginate: true
+_paginate: false
+header: "Short and Sweet Intro to Cassandra"
+---
 
-## Inspiration/background
+# Short and sweet
 
-* https://www.chessable.com/chess-openings/s/short%20sweet
-* https://en.wikipedia.org/wiki/Lightning_talk
+## Intro to Cassandra
 
-## Why
+---
 
-**If** you want to 
+# Intro, reason & background
 
-* share a use-case/problem solution from your project
-* share experience with a technology/tool/framework
-* dive (deeper) into new topics
-* learn by doing
+SQL vs. No(n)SQL
 
-**then** a lightning talk is what you need!
+---
 
-The goal of the short-and-sweet talk is not to provide an extensive teach-in experience - it's about knowledge sharing and inspiration to dive deeper later.
+# Important theoretical concepts
 
-## What
+- CAP theorem (!)
 
-* slides (Markdown/AsciiDoc)
-  * you might want to use Marp (https://marpit.marp.app) in VSCode + Marp extension
-    * see also https://github.com/yhatt/marp-cli-example
-* code
-* script/helper snippers to speed up the demo
+- SSTable
 
+---
 
-## When
+# About Cassandra
 
-TBD, most probably at lunch time aka 'Brown Bag Meeting' - simply announce and/or book the next available slot.
+- Distributed
+- Fault-tolerant
+- (Almost?) linearly scalable
+- Tunable eventual consistency
 
-Overall duration should be around 15-30 mins to reserve enough time to come to the meat of the talk **and** to have 5-10 mins for Q&A
+NoSQL database
 
-## How
+---
 
-* prepare the [What](##What)
-  * based on this template
-  * let https://github.com/OpenValue-D fork it
-* book the [When](##When)
-* and have fun
+# Use case: timeseries
+
+Cassandra is a good choice in case of
+
+- Huge amount of data, a huge number of queries but very little variety of queries
+
+but the latter condition kills the fun
+
+---
+
+# Demo
+
+<!--
+select * from measurements where meter_id = 1 and day = '2023-01-01';
+
+select * from measurements where meter_id = 1 and day = '2023-01-01';
+
+select max (day) from measurements;
+-->
+
+---
+
+# Q&A
+
+---
+
+# Links
+
+- https://en.wikipedia.org/wiki/CAP_theorem
+- https://www.scylladb.com/glossary/sstable/
+- https://en.wikipedia.org/wiki/Log-structured_merge-tree
+- https://www.geeksforgeeks.org/sstable-in-apache-cassandra/
+- https://www.datastax.com/dev/cassandra-indexing
+- https://www.geeksforgeeks.org/concept-of-indexing-in-apache-cassandra/
+- https://intellidzine.blogspot.com/2014/01/cassandra-data-modelling-primary-keys.html
+- https://stackoverflow.com/questions/2892729/mongodb-vs-cassandra
+- https://stackoverflow.com/questions/2634955/when-not-to-use-cassandra
+- https://www.datastax.com/blog/deep-look-cql-where-clause
+- https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra/24953331#24953331
+- https://stackoverflow.com/questions/32912109/cassandra-data-model-for-sensor-data-value-timestamp/32914199#32914199
+- https://dba.stackexchange.com/questions/313576/how-to-efficiently-run-range-based-queries-in-cassandra

@@ -60,18 +60,30 @@ select max (day) from measurements;
 
 ---
 
+# Conclusion?
+
+Use Cassandra to store IoT/ timeseries data, but not to process business use cases with it?
+
+---
+
 # Q&A
 
 ---
 
 # Links
+- https://hub.docker.com/_/cassandra/
+- https://cassandra.apache.org/_/index.html
+- https://www.datastax.com/products/apache-cassandra
 
 - https://en.wikipedia.org/wiki/CAP_theorem
 - https://www.scylladb.com/glossary/sstable/
+
 - https://en.wikipedia.org/wiki/Log-structured_merge-tree
 - https://www.geeksforgeeks.org/sstable-in-apache-cassandra/
+
 - https://www.datastax.com/dev/cassandra-indexing
 - https://www.geeksforgeeks.org/concept-of-indexing-in-apache-cassandra/
+
 - https://intellidzine.blogspot.com/2014/01/cassandra-data-modelling-primary-keys.html
 - https://stackoverflow.com/questions/2892729/mongodb-vs-cassandra
 - https://stackoverflow.com/questions/2634955/when-not-to-use-cassandra
@@ -79,3 +91,7 @@ select max (day) from measurements;
 - https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra/24953331#24953331
 - https://stackoverflow.com/questions/32912109/cassandra-data-model-for-sensor-data-value-timestamp/32914199#32914199
 - https://dba.stackexchange.com/questions/313576/how-to-efficiently-run-range-based-queries-in-cassandra
+
+- https://docs.datastax.com/en/tutorials/Time_Series.pdf
+
+- https://cassandra.apache.org/doc/latest/cassandra/operating/cdc.html

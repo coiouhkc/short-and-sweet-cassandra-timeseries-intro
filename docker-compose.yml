@@ -1,0 +1,36 @@
+version: "3"
+services:
+  # zookeeper:
+  #   image: quay.io/debezium/zookeeper:1.9
+  #   ports:
+  #     - "2181:2181"
+  #     - "2888:2888"
+  #     - "3888:3888"
+  # kafka:
+  #   image: quay.io/debezium/kafka:1.9
+  #   ports:
+  #     - "9092:9092"
+  #   links:
+  #     - zookeeper
+  #   environment:
+  #     - ZOOKEEPER_CONNECT=zookeeper:2181
+  # kafdrop:
+  #   image: obsidiandynamics/kafdrop
+  #   restart: "no"
+  #   ports:
+  #     - "9000:9000"
+  #   environment:
+  #     KAFKA_BROKERCONNECT: "kafka:9092"
+  #   depends_on:
+  #     - "kafka"
+  #   links:
+  #     - kafka
+  cassandra:
+    image: cassandra
+    ports:
+      - "9042:9042"
+  #   links:
+  #     - kafka
+    volumes:
+      - $PWD/cassandra.yaml:/etc/cassandra/cassandra.yaml
+      - $PWD:/tmp/intro
